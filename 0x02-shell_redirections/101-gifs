@@ -1,4 +1,2 @@
 #!/bin/bash
-let filelist = system('find . -type f -name "*.gif" -printf "%f\n" | sort -f')
-echo filelist
-
+find -type f -name "*.git" | rev | cut -d "/" -f 1 | cut -d '.' 2- | rev | LC_ALL=C sort -f
